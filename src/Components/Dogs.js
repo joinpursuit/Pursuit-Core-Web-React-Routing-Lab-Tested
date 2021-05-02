@@ -8,6 +8,7 @@ class Dogs extends React.Component {
     try {
        const {num} = this.props.match.params
       const res = await axios.get(`https://dog.ceo/api/breeds/image/random/${num}`);
+    
       this.setState({ urls: res.data.message });
     } catch (error) {
       console.log(error);
