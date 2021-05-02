@@ -6,9 +6,13 @@ export default class RandomDogs extends Component {
 
   fetchDogs = async () => {
     try {
-      const res = await axios.get(`https://dog.ceo/api/breeds/image/random`);
+      const { num } = this.props.match.params;
+
+      const res = await axios.get(
+        `https://dog.ceo/api/breeds/image/random/${num}`
+      );
       this.setState({ urls: res.data.message });
-    //   debugger
+      debugger;
     } catch (error) {
       console.log(error);
       this.setState({ urls: [] });
@@ -27,7 +31,9 @@ export default class RandomDogs extends Component {
         <ul>
           {urls.map((url) => {
             return (
+              <li key={url}>
                 <img src={url} alt="randomDogs" />
+              </li>
             );
           })}
         </ul>
