@@ -3,11 +3,14 @@ import MultipleRandomCats from "./Components/MultipleRandomCats";
 import MultipleRandomDogs from "./Components/MultipleRandomDogs";
 import RandomCatImage from "./Components/RandomCatImage";
 import RandomDogByBreed from "./Components/RandomDogByBreed";
-import RandomDogImage from "./Components/randomDogImage";
+import RandomDogImage from "./Components/RandomDogImage";
+import { Route, Switch } from "react-router-dom";
+import axios from "axios";
 
 function App() {
   return (
     <div className="app">
+      Hello, world!
       <Switch>
         <Route path={"/dog/random"} component={RandomDogImage} />
         <Route path={"/dog/random/:num"} component={MultipleRandomDogs} />
