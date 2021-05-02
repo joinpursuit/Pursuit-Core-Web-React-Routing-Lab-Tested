@@ -13,20 +13,21 @@ class RandomDog extends React.Component {
       this.setState({ urlImage: "" });
     }
   };
-  componentDidMount(){
-      this.fecthDog()
+  componentDidMount() {
+    this.fecthDog();
   }
 
-
   render() {
-      const {urlImage} = this.state
-      const fecthDog = this.fecthDog
+    const { urlImage } = this.state;
+    const fecthDog = this.fecthDog;
 
-    return <section>
+    return (
+      <section>
         <h1> Random Dog</h1>
         <button onClick={fecthDog}>Random Dog</button>
-        <img src={urlImage} alt="DogPics"/>
-    </section>;
+        <img src={urlImage} alt="DogPics" />
+      </section>
+    );
   }
 }
 
