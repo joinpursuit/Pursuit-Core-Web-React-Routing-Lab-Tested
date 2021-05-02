@@ -25,13 +25,11 @@ export default class RandomDogs extends Component {
       <div>
         <h2>Random Dogs</h2>
         <ul>
-          {/* {urls.map((url) => {
+          {urls.map((url) => {
             return (
-              <li>
                 <img src={url} alt="randomDogs" />
-              </li>
             );
-          })} */}
+          })}
         </ul>
       </div>
     );

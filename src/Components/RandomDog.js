@@ -14,8 +14,13 @@ this.setState({url: res.data.message})
         }
     }
 
+<<<<<<< HEAD
     componentDidMount() {
         this.fetchDog();
+=======
+    componentDidMount(){
+        this.fetchDog()
+>>>>>>> 5b30ca605ec91a853f09fe60b278d09d22815d44
     }
 
     render(){
