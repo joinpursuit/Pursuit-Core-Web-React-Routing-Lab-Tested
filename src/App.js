@@ -1,10 +1,16 @@
 import "./App.css";
+import MultipleRandomDogs from "./Components/MultipleRandomDogs";
+import RandomDog from './Components/RandomDog'
+import { Route, Switch} from "react-router-dom"
 
 function App() {
   return (
     <div className="app">
       <main>
-        <h1>Hello, world!</h1>
+        <Switch>
+          <Route path={"/dog/random/:num"} component={MultipleRandomDogs}/>
+          <Route path={"/dog/random"} component={RandomDog}/>
+        </Switch>
       </main>
     </div>
   );
