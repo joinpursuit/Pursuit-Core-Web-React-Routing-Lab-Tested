@@ -22,7 +22,7 @@ export default class Bonus extends Component{
                 return cats.url;
             })
             this.setState(prevState => ({
-                picURL: [...prevState.picURL,...catArray]
+                picURL: [...catArray,...prevState.picURL]
             }));
         } catch(err) {
             console.log(err);
