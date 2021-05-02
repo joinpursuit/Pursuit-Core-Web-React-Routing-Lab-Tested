@@ -14,6 +14,10 @@ this.setState({url: res.data.message})
         }
     }
 
+    componentDidMount(){
+        this.fetchDog()
+    }
+
     render(){
         const {url} = this.state
         return(
