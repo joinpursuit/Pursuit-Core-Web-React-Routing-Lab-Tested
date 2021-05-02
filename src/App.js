@@ -2,6 +2,7 @@ import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Links from "./Components/Links";
 import RandomDogImage from "./Components/RandomDogImage";
+import RandomCatImage from "./Components/RandomCatImage";
 import MultipleRandomDogs from "./Components/MultipleRandomDogs";
 import RandomDogByBreed from "./Components/RandomDogByBreed";
 
@@ -16,7 +17,7 @@ function App() {
         <Route path={"/dog/random"} component={RandomDogImage}></Route>
         <Route path={"/dog/:breed"} component={RandomDogByBreed}></Route>
         {/* <Route path={"/cat/random/:num"} component={MultipleRandomCats}></Route> */}
-        {/* <Route path={"/cat/random"} component={RandomCatImage}></Route> */}
+        <Route path={"/cat/random"} component={RandomCatImage}></Route>
       </Switch>
     </div>
   );
