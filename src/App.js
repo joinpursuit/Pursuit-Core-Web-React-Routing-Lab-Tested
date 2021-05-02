@@ -1,11 +1,10 @@
 import "./App.css";
+import RandomDog from "./Components/RandomDog"
 
 function App() {
   return (
     <div className="app">
-      <main>
-        <h1>Hello, world!</h1>
-      </main>
+      <RandomDog />
     </div>
   );
 }
