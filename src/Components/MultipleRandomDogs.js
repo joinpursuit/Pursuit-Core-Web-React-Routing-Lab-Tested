@@ -24,7 +24,7 @@ class MultipleRandomDogs extends Component {
         return(
             <div>
                 {imageUrls.map(url => {
-                    return <img src={url} alt="Dog pic"/>
+                    return <img src={url} alt="Dog pic" key={url.id}/>
                 })}
             </div>
         )

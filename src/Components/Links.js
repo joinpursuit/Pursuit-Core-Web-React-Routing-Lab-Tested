@@ -10,6 +10,7 @@ const Links = () => {
         <Link to="/dog/:breed"></Link>
         <Link to="/cat/random/:num"></Link>
         <Link to="/cat/random"></Link>
+        <Link to="/all/random"></Link>
         </section>
     )
 }
