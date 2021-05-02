@@ -3,6 +3,7 @@ import MultipleRandomDogs from "./Components/MultipleRandomDogs";
 import RandomDog from './Components/RandomDog'
 import RandomDogByBreed from './Components/RandomDogByBreed'
 import { Route, Switch} from "react-router-dom"
+import RandomCat from "./Components/RandomCat";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path={"/dog/random/:num"} component={MultipleRandomDogs}/>
           <Route path={'/dog/:breed'} component={RandomDogByBreed} />
           <Route path={"/dog/random"} component={RandomDog}/>
+          <Route path={"/cat/random"} component={RandomCat}/>
         </Switch>
       </main>
     </div>
