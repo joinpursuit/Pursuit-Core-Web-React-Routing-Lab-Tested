@@ -8,7 +8,6 @@ class Cats extends React.Component {
     try {
         const {num} = this.props.match.params
         const res = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=${num}`);
-      debugger
         this.setState({ urls: res.data});
     } catch (error) {
       console.log(error);
