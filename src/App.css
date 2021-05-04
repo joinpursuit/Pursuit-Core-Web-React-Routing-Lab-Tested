@@ -1,3 +1,18 @@
 .app {
+  font-family: Cochin;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+h2 {
   text-align: center;
+}
+
+.app nav {
+  width: 30vw;
+}
+
+.app section {
+  width: 70vw;
 }

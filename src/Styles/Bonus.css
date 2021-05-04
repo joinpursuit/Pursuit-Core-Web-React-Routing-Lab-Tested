@@ -1,0 +1,14 @@
+ul {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+li {
+    list-style: none;
+}

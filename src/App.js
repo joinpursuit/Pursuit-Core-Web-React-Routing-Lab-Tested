@@ -6,19 +6,20 @@ import DogBreed from "./Components/ DogBreed";
 import CatRandom from "./Components/CatRandom";
 import CatRandomNum from "./Components/CatRandomNum";
 import Bonus from "./Components/Bonus";
+import NavBar from "./Components/NavBar";
 
 function App() {
   return (
     <div className="app">
+      <NavBar />
       <Switch>
-        {/* /all/random */}
+        {/* how to use exact path to get only one active selction */}
         <Route path={"/dog/random/:num"} component={RandomDogs} />
-        <Route path={"/dog/random"} component={RandomDog} />
+        <Route exact path={"/dog/random"} component={RandomDog} />
         <Route path={"/dog/:breed"} component={DogBreed} />
         <Route path={"/cat/random/:num"} component={CatRandomNum} />
-        <Route path={"/cat/random"} component={CatRandom} />
+        <Route exact path={"/cat/random"} component={CatRandom} />
         <Route path={"/all/random"} component={Bonus} />
-
       </Switch>
     </div>
   );

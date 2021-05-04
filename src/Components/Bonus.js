@@ -1,5 +1,6 @@
 import { Component } from "react";
 import axios from "axios";
+import "../Styles/Bonus.css"
 
 export default class Bonus extends Component {
   state = { dogUrls: [], catUrls: [] };
@@ -44,8 +45,8 @@ export default class Bonus extends Component {
     const { catUrls, dogUrls } = this.state;
 
     return (
-      <section>
-        <h2>Bonus: Random Cats and Dogs</h2>
+      <section id="Bonus">
+        <h2>Random Cats and Dogs</h2>
         <ul>
           {catUrls.map((catUrl) => {
             return (
