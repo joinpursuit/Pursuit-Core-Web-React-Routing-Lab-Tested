@@ -8,6 +8,7 @@ class DogBreed extends React.Component {
         try {
             const { breed } = this.props.match.params
             const res = await axios.get(`https://dog.ceo/api/breed/${breed}/images/random`)
+            console.log(res)
             this.setState({dogBreed: res.data.message})
         } catch (error) {
             this.setState({dogBreed: ""})
@@ -22,7 +23,7 @@ class DogBreed extends React.Component {
         const { dogBreed } = this.state
         return (
             <section>
-                <img src={dogBreed}  alt="random dog image"/>
+                <img src={dogBreed}  alt="Random dog image"/>
             </section>
         )
     }

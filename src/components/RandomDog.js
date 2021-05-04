@@ -23,7 +23,7 @@ class RandomDog extends React.Component {
         const { dog } = this.state
         return (
             <section>
-                <Link to="/dog"></Link>
+                <Link to="/dog/random"></Link>
                 <img src={dog}  alt="Random Dog Image"/>
                 <button onClick={this.fetchRandomDog}>Get New Dog</button>
             </section>

@@ -4,7 +4,6 @@ import DogBreed from './components/DogBreed'
 import RandomCat from './components/RandomCat'
 import Cats from './components/Cats'
 import { Route, Switch } from 'react-router-dom'
-
 import "./App.css";
 
 function App() {
@@ -13,10 +12,10 @@ function App() {
       <main>
         <Switch>
         <Route path={"/dog/random/:num"} component={Dogs} />
-        <Route path={"/dog/:breed"} component={DogBreed} />
-        <Route exact path={"/dog"} component={RandomDog} />
         <Route path={"/cat/random/:num"} component={Cats} />
-        <Route path={"/cat"} component={RandomCat} />
+        <Route exact path={"/dog/random"} component={RandomDog} />
+        <Route exact path={"/cat/random"} component={RandomCat} />
+        <Route path={"/dog/:breed"} component={DogBreed} />
         </Switch>
       </main>
     </div>

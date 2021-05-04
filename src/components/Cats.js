@@ -24,7 +24,7 @@ class Cats extends React.Component {
         return (
             <section>
                 {cats.map(cat => {
-                    console.log(cat)
+                    return <img src={cat.url} alt="cat images" />
                 })}
             </section>
         )
