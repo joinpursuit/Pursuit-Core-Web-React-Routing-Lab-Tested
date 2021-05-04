@@ -12,7 +12,7 @@ export default class RandomDogs extends Component {
         `https://dog.ceo/api/breeds/image/random/${num}`
       );
       this.setState({ urls: res.data.message });
-      debugger;
+      // debugger;
     } catch (error) {
       console.log(error);
       this.setState({ urls: [] });

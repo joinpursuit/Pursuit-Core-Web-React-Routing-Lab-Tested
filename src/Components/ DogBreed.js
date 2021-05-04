@@ -9,7 +9,7 @@ export default class DogBreed extends Component {
       const { breed } = this.props.match.params;
 
       const res = await axios.get(
-        `https://dog.ceo/api/breeds/image/random/${breed}`
+        `https://dog.ceo/api/breed/${breed}/images/random`
       );
       this.setState({ url: res.data.message });
     } catch (error) {
@@ -29,7 +29,7 @@ export default class DogBreed extends Component {
     const { url } = this.state;
     return (
       <div>
-        <h2>{breed}</h2>
+        <h2>{breed.toUpperCase() }</h2>
         <img src={url} alt="randomDog" />
       </div>
     );
