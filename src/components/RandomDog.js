@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 
 class RandomDog extends React.Component {
     state = {dog: ""}
@@ -23,8 +22,7 @@ class RandomDog extends React.Component {
         const { dog } = this.state
         return (
             <section>
-                <Link to="/dog"></Link>
-                <img src={dog}  alt="Random Dog Image"/>
+                <img src={dog}  alt="Random Doc Pic"/>
                 <button onClick={this.fetchRandomDog}>Get New Dog</button>
             </section>
         )

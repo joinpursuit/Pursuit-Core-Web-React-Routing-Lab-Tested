@@ -22,7 +22,7 @@ class DogBreed extends React.Component {
         const { dogBreed } = this.state
         return (
             <section>
-                <img src={dogBreed}  alt="random dog image"/>
+                <img src={dogBreed} alt="randomDog-Breed"/>
             </section>
         )
     }

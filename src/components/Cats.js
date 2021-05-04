@@ -8,7 +8,6 @@ class Cats extends React.Component {
         try {
             const { num } = this.props.match.params
             const res = await axios.get(`https://api.thecatapi.com/v1/images/search/?limit=${num}`)
-            console.log(res)
             this.setState({cats: res.data})
         } catch (error) {
             this.setState({cats: []})
@@ -24,7 +23,7 @@ class Cats extends React.Component {
         return (
             <section>
                 {cats.map(cat => {
-                    console.log(cat)
+                 return <img src={cat.url} alt="cat-pic"/>
                 })}
             </section>
         )

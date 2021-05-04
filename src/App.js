@@ -12,10 +12,10 @@ function App() {
       <main>
         <Switch>
         <Route path={"/dog/random/:num"} component={Dogs} />
-        <Route path={"/dog/:breed"} component={DogBreed} />
-        <Route exact path={"/dog"} component={RandomDog} />
         <Route path={"/cat/random/:num"} component={Cats} />
-        <Route path={"/cat"} component={RandomCat} />
+        <Route path={"/dog/random"} component={RandomDog} />
+        <Route path={"/cat/random"} component={RandomCat} />
+        <Route path={"/dog/:breed"} component={DogBreed} />
         </Switch>
       </main>
     </div>
