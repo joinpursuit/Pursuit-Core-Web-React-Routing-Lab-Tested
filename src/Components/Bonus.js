@@ -4,11 +4,15 @@ import axios from "axios";
 export default class Bonus extends Component {
   state = { dogUrls: [], catUrls: [] };
 
+  randomNum = () => {
+      return Math.floor(Math.random() * 10);
+  }
+  
+  
   fetchDogs = async () => {
     try {
-      const { num } = this.props.match.params;
       const res = await axios.get(
-        `https://dog.ceo/api/breeds/image/random/${num}`
+        `https://dog.ceo/api/breeds/image/random/${this.randomNum()}`
       );
       this.setState({ dogUrls: res.data.message });
       //debugger
@@ -20,9 +24,8 @@ export default class Bonus extends Component {
 
   catchCats = async () => {
     try {
-      const { num } = this.props.match.params;
       const res = await axios.get(
-        `https://api.thecatapi.com/v1/images/search?limit=${num}`
+        `https://api.thecatapi.com/v1/images/search?limit=${this.randomNum()}`
       );
       this.setState({ catUrls: res.data });
     } catch (err) {
@@ -32,6 +35,7 @@ export default class Bonus extends Component {
   };
 
   componentDidMount() {
+      
     this.fetchDogs();
     this.catchCats();
   }
