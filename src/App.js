@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="app">
       <main>
-        <h1>Hello, world!</h1>
+        
         <Switch>
           <Route path={"/dog/random/:num"} component={DogRandomNum} />
           <Route path={"/dog/random"} component={DogRandom} />
