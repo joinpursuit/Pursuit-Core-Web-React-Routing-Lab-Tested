@@ -15,7 +15,7 @@ function App() {
         <Switch>
           <Route path={"/dog/random/:num"} component={DogRandomNum} />
           <Route path={"/dog/random"} component={DogRandom} />
-          <Route path={"/dog/breed"} component={DogBreed} />
+          <Route path={"/dog/:breed"} component={DogBreed} />
           <Route path={"/cat/random/:num"} component={CatRandomNum} />
           <Route path={"/cat/random"} component={CatRandom} />
         </Switch>
