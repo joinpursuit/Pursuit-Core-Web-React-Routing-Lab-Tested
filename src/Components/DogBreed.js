@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 export default class DogBreed extends Component {
-  state = { breeds: [], breed: "", pics: [] };
+  state = {  pic: [] };
 
   componentDidMount() {
     this.handleChange();
@@ -14,17 +14,17 @@ export default class DogBreed extends Component {
         `https://dog.ceo/api/breed/${breed}/images/random/1`
       );
       console.log(res.data.message);
-      this.setState({ pics: res.data.message });
+      this.setState({ pic: res.data.message });
     } catch (err) {
       this.setState({ breeds: [] });
     }
   };
-
+  
   render() {
     return (
       <div>
         <h2>DogBreed</h2>
-        <img src={this.state.pics} alt="dog pic" />
+        <img src={this.state.pic} alt="dog pic" />
       </div>
     );
   }
