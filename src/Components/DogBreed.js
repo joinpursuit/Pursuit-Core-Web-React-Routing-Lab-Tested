@@ -24,7 +24,7 @@ export default class DogBreed extends Component {
     return (
       <div>
         <h2>DogBreed</h2>
-        <img src={this.state.pics} />
+        <img src={this.state.pics} alt="dog pic" />
       </div>
     );
   }
