@@ -1,7 +1,7 @@
 const breed = "affenpinscher";
 const dog = "https://images.dog.ceo/breeds/affenpinscher/n02110627_1966.jpg";
 
-describe("/dog/random/:num", () => {
+describe("/dog/:breed", () => {
   it("renders the random dogs", () => {
     cy.intercept(`https://dog.ceo/api/breed/${breed}/images/random`, {
       message: dog,
