@@ -10,9 +10,16 @@ const getMultipleDogs = async (num) => {
     return data.message
 }
 
+const getBreed = async (breed) => {
+    const { data } = await axios.get(`https://dog.ceo/api/breed/${breed}/images/random`)
+    return data.message
+}
+
+
 const dogsAPI = {
     getDog,
     getMultipleDogs,
+    getBreed,
 }
 
 export default dogsAPI
