@@ -1,5 +1,6 @@
 import {Route, Switch} from "react-router-dom"
 import Cats from "./Cats"
+import Dogs from "./Dogs"
 import "./App.css";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <main>
         <Switch>
           <Route path="/cat" component={Cats} />
+          <Route path="/dogs" component={Dogs} />
           <Route render={() => <h1>404: Nothing to see here</h1>} />
         </Switch>
       </main>

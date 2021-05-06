@@ -22,7 +22,7 @@ export class CatRandom extends Component {
     render() {
         return (
             <div>
-                <h1>cat random component</h1>
+                <h1>Cat Random Component</h1>
                 <button onClick={this.newCat}>Get new cat</button>
                 <img src={this.state.catURL} alt="cat" />
             </div>
