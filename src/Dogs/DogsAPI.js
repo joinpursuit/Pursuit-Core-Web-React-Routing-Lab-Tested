@@ -15,7 +15,6 @@ const getBreed = async (breed) => {
     return data.message
 }
 
-
 const dogsAPI = {
     getDog,
     getMultipleDogs,

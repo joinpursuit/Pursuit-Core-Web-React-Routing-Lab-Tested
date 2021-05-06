@@ -11,8 +11,8 @@ function Cats() {
     return (
         <div>Cats Component
             <Switch>
-                <Route exact path="/cat/random" component={CatRandom} />
                 <Route path="/cat/random/:num" render={renderCatRandomNum} />
+                <Route path="/cat/random" component={CatRandom} />
             </Switch>
         </div>
     )

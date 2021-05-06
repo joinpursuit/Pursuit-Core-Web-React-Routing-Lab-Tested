@@ -16,9 +16,9 @@ function Dogs() {
     return (
         <div>
             <Switch>
-                <Route path="/dog/:breed" render={renderDogBreed}/>
+                <Route exact path="/dog/random" component={DogRandom} />
                 <Route path="/dog/random/:num" render={renderDogRandomNum} />
-                <Route path="/dog/random" component={DogRandom} />
+                <Route path="/dog/:breed" render={renderDogBreed}/>
             </Switch>
         </div>
     )
