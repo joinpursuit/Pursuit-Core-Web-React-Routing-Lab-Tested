@@ -7,7 +7,7 @@ const getDog =  async () => {
 
 const getMultipleDogs = async (num) => {
     const { data } = await axios.get(`https://dog.ceo/api/breeds/image/random/${num}`)
-    return data.map((dogObj) => dogObj.message)
+    return data.message
 }
 
 const dogsAPI = {

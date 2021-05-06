@@ -10,7 +10,6 @@ export class DogRandomNum extends Component {
         }
     }
 
-
     async componentDidMount() {
         const dogs = await dogsAPI.getMultipleDogs(this.props.num)
         this.setState({ dogURLs: dogs })
