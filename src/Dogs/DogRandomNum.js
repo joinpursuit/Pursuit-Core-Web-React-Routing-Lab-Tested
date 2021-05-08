@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from "axios";
 
-export class DogRandomNum extends Component {
+class DogRandomNum extends Component {
     constructor(){
         super();
         this.state = {

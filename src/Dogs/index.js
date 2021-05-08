@@ -20,10 +20,10 @@ export class Dogs extends Component {
             <div>
                 Dogs Component
                 <Switch>
-                    <Route path="/dog/:breed" render={this.dogBreed}></Route>
-                    {/* <Route path="/dog/:breed" component={DogBreed}></Route> */}
                     <Route path="/dog/random/:num" render={this.dogUrls}></Route>
                     <Route path="/dog/random" component={DogRandom}></Route>
+                    <Route path="/dog/:breed" render={this.dogBreed}></Route>
+                    {/* <Route path="/dog/:breed" component={DogBreed}></Route> */}
                 </Switch>
             </div>
         )
