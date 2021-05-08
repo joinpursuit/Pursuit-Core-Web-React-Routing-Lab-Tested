@@ -14,7 +14,7 @@ export default class RandomDogs extends Component {
       debugger
     } catch (error) {
       console.log(error);
-      this.setState({ urls: [] });
+      this.setState({ urls: [] });                 
     }
   };
 
