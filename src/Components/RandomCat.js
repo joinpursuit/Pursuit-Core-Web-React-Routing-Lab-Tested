@@ -1,26 +1,22 @@
-import { Component } from "react"
+import React, { useState, useEffect } from "react";
 import axios from "axios"
 
-class RandomCat extends Component {
-    state = { urlImage: [] };
+const RandomCat = () => {
+  const [urlImage, setUrlImage] = useState([])
   
-    fecthCat = async () => {
+    const fecthCat = async () => {
       try {
         const res = await axios.get("https://api.thecatapi.com/v1/images/search?api_key=83ba6aaf-234d-4e1a-990a-e77f82c6cdf8");
-        this.setState({urlImage: res.data})
+        setUrlImage(res.data)
       } catch (error) {
         console.log(error);
-        this.setState({ urlImage: [] });
+        setUrlImage([]);
       }
     };
-    componentDidMount(){
-        this.fecthCat()
-    }
-  
-  
-    render() {
-        const {urlImage} = this.state
-        const fecthCat = this.fecthCat
+
+    useEffect(()=> {
+      fecthCat()
+    })
   
       return <section>
           <h1> Random Cat</h1>
@@ -30,7 +26,7 @@ class RandomCat extends Component {
           })}
           
       </section>;
-    }
+  
   }
   
   export default RandomCat;

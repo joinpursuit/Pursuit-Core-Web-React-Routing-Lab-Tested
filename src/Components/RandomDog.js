@@ -1,34 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-class RandomDog extends React.Component {
-  state = { urlImage: "" };
+const RandomDog = () => {
+  const [urlImage, setUrlImage] = useState("");
 
-  fecthDog = async () => {
+  const fecthDog = async () => {
     try {
       const res = await axios.get("https://dog.ceo/api/breeds/image/random");
-      this.setState({ urlImage: res.data.message });
+      setUrlImage(res.data.message);
     } catch (error) {
       console.log(error);
-      this.setState({ urlImage: "" });
+      setUrlImage("");
     }
   };
-  componentDidMount() {
-    this.fecthDog();
-  }
+  useEffect(() => {
+    fecthDog();
+  }, []);
 
-  render() {
-    const { urlImage } = this.state;
-    const fecthDog = this.fecthDog;
-
-    return (
-      <section>
-        <h1> Random Dog</h1>
-        <button onClick={fecthDog}>Random Dog</button>
-        <img src={urlImage} alt="DogPics" />
-      </section>
-    );
-  }
-}
+  return (
+    <section>
+      <h1> Random Dog</h1>
+      <button onClick={fecthDog}>Random Dog</button>
+      <img src={urlImage} alt="DogPics" />
+    </section>
+  );
+};
 
 export default RandomDog;

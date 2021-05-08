@@ -1,34 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect} from "react";
 import axios from 'axios'
 
 
+const  RandomDogByBreed = (props) => {
+    const [breed, setBreed] = useState('')
 
-class RandomDogByBreed extends React.Component{
-    state={breed: ''}
-
-    dogBreed = async() => {
+    const dogBreed = async() => {
         try{
-            const {breed} = this.props.match.params
+            const {breed} = props.match.params
             const res = await axios.get(`https://dog.ceo/api/breed/${breed}/images/random`)
-            this.setState({breed: res.data.message})
+            setBreed(res.data.message)
 
         }catch (error){
             console.log(error)
-            this.setState({breed: ''})
+            setBreed('')
         }
     }
 
-    componentDidMount(){
-        this.dogBreed()
-    }
-    render(){
-        const {breed} = this.state
+    useEffect(()=> {
+        dogBreed()
+    },[])
         return (
             <section>
                <img src={breed} alt="dog-by-breed" />
             </section>
         )
-    }
+
 }
 
 export default RandomDogByBreed

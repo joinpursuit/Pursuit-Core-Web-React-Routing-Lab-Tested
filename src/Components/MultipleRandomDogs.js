@@ -1,33 +1,32 @@
-import { Component } from "react"
-import axios from "axios"
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-class MultipleRandomDogs extends Component {
-    state = {dogs: []}
+const MultipleRandomDogs = (props) => {
+  const [dogs, setDogs] = useState([]);
 
-    getDogs = async () => {
-        try {
-            const { num } = this.props.match.params
-            const res = await axios.get(`https://dog.ceo/api/breeds/image/random/${num}`)
-            this.setState({dogs: res.data.message})
-        } catch (error) {
-            console.log(error);
-            this.setState({dogs: []})
-        }
+  const getDogs = async () => {
+    try {
+      const { num } = props.match.params;
+      const res = await axios.get(
+        `https://dog.ceo/api/breeds/image/random/${num}`
+      );
+      setDogs(res.data.message);
+    } catch (error) {
+      console.log(error);
+      setDogs([]);
     }
+  };
+  useEffect(()=> {
+    getDogs()
+  },[])
 
-    componentDidMount(){
-        this.getDogs()
-    }
-    render(){
-        const { dogs } = this.state
-        return (
-            <section>
-                {dogs.map(dog => {
-                    return <img src={dog} alt="dog-pic"/>
-                })}
-            </section>
-        )
-    }
-}
+  return (
+    <section>
+      {dogs.map((dog) => {
+        return <img src={dog} alt="dog-pic" />;
+      })}
+    </section>
+  );
+};
 
-export default MultipleRandomDogs
+export default MultipleRandomDogs;
