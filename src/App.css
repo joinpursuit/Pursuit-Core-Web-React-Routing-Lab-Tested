@@ -1,3 +1,17 @@
 .app {
   text-align: center;
+  background-color: blue;
+}
+
+
+
+div {
+  text-align: center;
+  background-color: blue;
+  color: white;
+}
+img {
+  height: 300px;
+  margin-bottom: 40px;
+  border-radius: 35px;
 }
