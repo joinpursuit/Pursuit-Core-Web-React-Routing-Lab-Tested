@@ -1,10 +1,14 @@
 import "./App.css";
+import Dog from "./Dogs/Dog.js";
+import Cat from "./Cats/Cat.js";
+import
 
 function App() {
   return (
     <div className="app">
       <main>
-        <h1>Hello, world!</h1>
+        <Dog />
+        <Cat />
       </main>
     </div>
   );
