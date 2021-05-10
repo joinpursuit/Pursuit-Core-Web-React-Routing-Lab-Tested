@@ -9,7 +9,7 @@ Today, we are creating a full-fledged app to fulfill all of your pet-image-searc
 
 <details>
   <summary>Tips: Using the APIs</summary>
-
+   
 **Cat API**
 
 - You may see some instructions in the docs about getting an API key. You don't need it to do this lab. You can ignore that.
