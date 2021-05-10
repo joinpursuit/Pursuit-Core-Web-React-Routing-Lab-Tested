@@ -1,11 +1,11 @@
+import { Route } from "react-router";
 import "./App.css";
+import Animals from './Components/Animals'
 
 function App() {
   return (
     <div className="app">
-      <main>
-        <h1>Hello, world!</h1>
-      </main>
+      <Route path='/' component={Animals} />
     </div>
   );
 }
