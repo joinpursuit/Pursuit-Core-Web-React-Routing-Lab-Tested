@@ -1,14 +1,20 @@
 import "./App.css";
-import Dog from "./Dogs/Dog.js";
-import Cat from "./Cats/Cat.js";
+import RandomDog from "./Dogs/RandomDog.js";
+import RandomCat from "./Cats/RandomCat.js";
+import { Link, Route, Switch } from "react-router-dom";
+
+const notFound = () => {
+  return <h1>Enter Valid URL</h1>;
+};
 
 function App() {
   return (
     <div className="app">
-      <main>
-        <Dog />
-        <Cat />
-      </main>
+      <Switch>
+        <Route path="/dog" component={RandomDog} />
+        <Route path="/cat/random" component={RandomCat} />
+        <Route component={notFound} />
+      </Switch>
     </div>
   );
 }
