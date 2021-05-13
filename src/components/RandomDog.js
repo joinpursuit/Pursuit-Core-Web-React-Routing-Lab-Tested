@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, Switch, Route } from "react-router-dom";
 import axios from "axios";
-import Dog from ".//Dog";
+import Dog from ".//Dog"; 
 
 export default class RandomDog extends Component {
   constructor() {
@@ -45,6 +45,7 @@ export default class RandomDog extends Component {
           <Route exact path="/dog/random/" render={this.renderDog} />
         </Switch>
       </div>
+
     );
   }
 }
