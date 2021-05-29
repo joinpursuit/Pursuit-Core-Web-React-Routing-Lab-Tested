@@ -35,22 +35,27 @@ export default class CatsAndDogs extends Component {
         })
     }
 
-
-
     render() {
         const {dogs, cats } = this.state
-        // const dogsMap = dogs.map((dog) => {
-        //     return <img src={dog} alt="A beautiful dog!" />
-        // })
-        const dogsMap = dogs.map((dog) => {
-            return <img src={dog} alt="Dogs!" style={{height: '300px'}} />
-        })
-        console.log(dogs)
+
+        if (dogs) {
+            const dogsMap = dogs.map((dog) => {
+                return <img src={dog} alt="Dogs!" style={{height: '300px'}} />
+            })
+            console.log(dogs)
+        }
  
         return (
             <div>
                 Cats And Dogs!
-                {dogsMap}
+                {cats ? 
+                    cats.map((cat, i) => {
+                        return <img src={cat} key={i} alt='one of many cats' style={{height: '300px'}} />
+                    })
+                : null}
+                {dogs ? 
+                    dogs.map((dog, i) => {return <img src={dog} key={i} style={{height: '300px'}} />}) 
+                : null}
             </div>
         )
     }

@@ -34,7 +34,7 @@ class CatRandom extends React.Component {
     }
 
     render() {
-        const { url, numOfCats } = this.state
+        const { url } = this.state
 
         return (
             <div>
